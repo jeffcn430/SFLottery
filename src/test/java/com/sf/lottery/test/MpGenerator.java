@@ -51,7 +51,7 @@ public class MpGenerator {
 		dsc.setDriverName("com.mysql.jdbc.Driver");
 		dsc.setUsername("root");
 		dsc.setPassword("qwe123");
-		dsc.setUrl("jdbc:mysql://localhost:3306/sf1?useUnicode=true&characterEncoding=utf8&useSSL=true");
+		dsc.setUrl("jdbc:mysql://localhost:3306/sf?useUnicode=true&characterEncoding=utf8&useSSL=true");
 		mpg.setDataSource(dsc);
 
 		String[] TablePrefix = new String[] { "t_" };

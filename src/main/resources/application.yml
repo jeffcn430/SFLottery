@@ -5,7 +5,7 @@ spring:
     mode: LEGACYHTML5
     cache: false
   datasource:
-    url: jdbc:mysql://localhost:3306/sf1?useUnicode=true&characterEncoding=utf8&useSSL=true
+    url: jdbc:mysql://localhost:3306/sf?useUnicode=true&characterEncoding=utf8&useSSL=true
     driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: qwe123
@@ -35,13 +35,15 @@ spring:
       connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
       # 合并多个DruidDataSource的监控数据
       #useGlobalDataSourceStat: true
-
+      stat-view-servlet:
+        login-username: admin
+        login-password: admin
 
 #mybatis
 #mybatis-plus:
 mybatis-plus:
   mapper-locations: classpath:/static/mapping/*.xml
-  typeAliasesPackage: com.sf.layui.model #实体扫描，多个package用逗号或者分号分隔
+  typeAliasesPackage: com.sf.lottery.model #实体扫描，多个package用逗号或者分号分隔
   typeEnumsPackage: com.sf.lottery.enums
   configuration:
       map-underscore-to-camel-case: false
